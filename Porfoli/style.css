@@ -1,229 +1,176 @@
-/* ---------- RESET ---------- */
+/* RESET BÀSIC */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-  font-family: "Poppins", sans-serif;
-  background: #f4f6f9;
-  color: #222;
-  line-height: 1.6;
-}
-img {
-  max-width: 100%;
-  display: block;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
 }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 header {
-  background: #111;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #222;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
 header img {
-  width: 50px;
+    height: 50px;
 }
+
 header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-}
-header nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -5px;
-  background: #ff5a5f;
-  transition: 0.3s;
-}
-header nav a:hover::after {
-  width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
 }
 
-/* ---------- HERO ---------- */
-#hoeme {
-  text-align: center;
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #ff5a5f, #ffb347);
-  color: #fff;
-}
-#hoeme h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-#hoeme p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-}
-#hoeme img {
-  width: 220px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-  margin: 0 auto;
+header nav ul a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-/* ---------- SECCIONS GENERALS ---------- */
+header nav ul a:hover {
+    color: #00bcd4;
+}
+
+/* SECCIONS */
 section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-}
-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  position: relative;
-}
-section h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #ff5a5f;
-  margin: 0.5rem auto;
-  border-radius: 2px;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* ---------- SERVICES (nuevo diseño) ---------- */
-#services {
-  background: #fff;
-  padding: 5rem 2rem;
+section h1, section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-#services > div {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
+section p {
+    margin-bottom: 1rem;
+    text-align: justify;
 }
 
-#services div div {
-  background: #f9fafc;
-  padding: 3rem 2rem;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
+/* HOME */
+#home {
+    text-align: center;
+    background: linear-gradient(to right, #00bcd4, #0097a7);
+    color: white;
+    padding: 5rem 2rem;
+    border-radius: 0 0 30px 30px;
 }
 
-#services div div:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+#home img {
+    margin-top: 2rem;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
 }
 
-/* Icono circular encima del título */
-#services div div::before {
-  content: "★"; /* cambia esto por un icono Font Awesome si quieres */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: #fff;
-  background: linear-gradient(135deg, #ff5a5f, #ffb347);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+/* SERVEIS */
+#services div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 #services h3 {
-  font-size: 1.4rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  color: #222;
+    margin-bottom: 0.5rem;
+    color: #0097a7;
 }
 
-#services p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* ---------- ABOUT ME ---------- */
+/* ABOUT ME */
 #about\ me {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-#about\ me img {
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-#about\ me h3 {
-  margin-bottom: 1rem;
-  color: #555;
-}
-
-/* ---------- MY WORK ---------- */
-#My\ work div {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-#My\ work img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-#My\ work img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-  background: #111;
-  color: #ccc;
-  text-align: center;
-  padding: 2rem;
-}
-footer a {
-  color: #ff5a5f;
-  text-decoration: none;
-}
-footer ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-footer ul a {
-  color: #fff;
-  transition: 0.3s;
-}
-footer ul a:hover {
-  color: #ff5a5f;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-  header nav ul {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#about\ me img {
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* MY WORK */
+#My\ work div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem;
-  }
-  #about\ me {
-    grid-template-columns: 1fr;
-  }
+    margin-top: 2rem;
+}
+
+#My\ work img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+#My\ work img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1rem;
+    gap: 1.5rem;
+}
+
+footer ul a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        padding: 1rem;
+        display: none;
+    }
+
+    header button {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+    }
 }
