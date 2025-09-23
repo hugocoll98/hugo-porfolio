@@ -1,176 +1,175 @@
-/* RESET BÀSIC */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* elimina márgenes por defecto de todos los elementos */
+    padding: 0; /* elimina padding por defecto */
+    box-sizing: border-box; /* incluye borde y padding en el cálculo del ancho/alto */
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: #f9f9f9;
-    color: #333;
+    font-family: 'Arial', sans-serif; /* tipografía general */
+    line-height: 1.6; /* altura de línea para mejorar legibilidad */
+    background: #f9f9f9; /* fondo gris claro */
+    color: #333; /* texto gris oscuro */
 }
 
 /* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: #222;
-    color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    display: flex; /* organiza en fila */
+    justify-content: space-between; /* separa logo a la izq. y menú a la der. */
+    align-items: center; /* centra verticalmente */
+    padding: 1rem 2rem; /* espacio interno */
+    background: #222; /* fondo gris oscuro */
+    color: #fff; /* texto blanco */
+    position: sticky; /* queda fijo al hacer scroll */
+    top: 0; /* pegado arriba */
+    z-index: 1000; /* por encima de otros elementos */
 }
 
 header img {
-    height: 50px;
+    height: 50px; /* altura del logo */
 }
 
 header nav ul {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
+    display: flex; /* lista en fila */
+    gap: 1.5rem; /* separación entre enlaces */
+    list-style: none; /* quita los puntos de lista */
 }
 
 header nav ul a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
+    text-decoration: none; /* sin subrayado */
+    color: #fff; /* enlaces en blanco */
+    font-weight: bold; /* en negrita */
+    transition: color 0.3s; /* animación suave al cambiar color */
 }
 
 header nav ul a:hover {
-    color: #00bcd4;
+    color: #00bcd4; /* cambia a turquesa al pasar el ratón */
 }
 
-/* SECCIONS */
+/* SECCIONES */
 section {
-    padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: auto;
+    padding: 4rem 2rem; /* espacio interno amplio */
+    max-width: 1000px; /* limita el ancho */
+    margin: auto; /* centra horizontalmente */
 }
 
 section h1, section h2 {
-    text-align: center;
-    margin-bottom: 1rem;
+    text-align: center; /* títulos centrados */
+    margin-bottom: 1rem; /* margen inferior */
 }
 
 section p {
-    margin-bottom: 1rem;
-    text-align: justify;
+    margin-bottom: 1rem; /* separación entre párrafos */
+    text-align: justify; /* texto justificado */
 }
 
 /* HOME */
 #home {
-    text-align: center;
-    background: linear-gradient(to right, #00bcd4, #0097a7);
-    color: white;
-    padding: 5rem 2rem;
-    border-radius: 0 0 30px 30px;
+    text-align: center; /* contenido centrado */
+    background: linear-gradient(to right, #00bcd4, #0097a7); /* degradado azul */
+    color: white; /* texto blanco */
+    padding: 5rem 2rem; /* espacio interno grande */
+    border-radius: 0 0 30px 30px; /* bordes inferiores redondeados */
 }
 
 #home img {
-    margin-top: 2rem;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid white;
+    margin-top: 2rem; /* margen superior */
+    width: 200px; /* ancho fijo */
+    height: 200px; /* alto fijo */
+    object-fit: cover; /* recorta imagen sin deformarla */
+    border-radius: 50%; /* imagen circular */
+    border: 5px solid white; /* borde blanco alrededor */
 }
 
-/* SERVEIS */
+/* SERVICIOS */
 #services div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    display: grid; /* usa grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* columnas adaptables */
+    gap: 2rem; /* espacio entre columnas */
+    margin-top: 2rem; /* separación superior */
 }
 
 #services h3 {
-    margin-bottom: 0.5rem;
-    color: #0097a7;
+    margin-bottom: 0.5rem; /* separación inferior */
+    color: #0097a7; /* color turquesa */
 }
 
 /* ABOUT ME */
 #about\ me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    display: flex; /*Els elements que hi ha a dins passen a ser flex items.*/
+    flex-direction: column; /* organiza en columna */
+    align-items: center; /* centra horizontalmente */
+    gap: 2rem; /* espacio entre elementos */
 }
 
 #about\ me img {
-    max-width: 400px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    max-width: 400px; /* ancho máximo */
+    border-radius: 15px; /* bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* sombra elegante */
 }
 
 /* MY WORK */
 #My\ work div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+    display: grid; /* grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* columnas adaptables */
+    gap: 1rem; /* espacio entre imágenes */
+    margin-top: 2rem; /* separación superior */
 }
 
 #My\ work img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s;
+    width: 100%; /* ocupa todo el ancho del contenedor */
+    height: 180px; /* alto fijo */
+    object-fit: cover; /* mantiene proporción sin deformar */
+    border-radius: 10px; /* bordes redondeados */
+    transition: transform 0.3s; /* animación suave en hover */
 }
 
 #My\ work img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* zoom al pasar el ratón */
 }
 
 /* FOOTER */
 footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 2rem;
+    background: #222; /* fondo oscuro */
+    color: #fff; /* texto blanco */
+    text-align: center; /* texto centrado */
+    padding: 2rem; /* espacio interno */
 }
 
 footer a {
-    color: #00bcd4;
-    text-decoration: none;
+    color: #00bcd4; /* enlaces turquesa */
+    text-decoration: none; /* sin subrayado */
 }
 
 footer ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 1rem;
-    gap: 1.5rem;
+    display: flex; /* lista en fila */
+    justify-content: center; /* centrada */
+    list-style: none; /* sin puntos */
+    margin-top: 1rem; /* separación superior */
+    gap: 1.5rem; /* espacio entre enlaces */
 }
 
 footer ul a:hover {
-    color: #fff;
-    text-decoration: underline;
+    color: #fff; /* cambia a blanco */
+    text-decoration: underline; /* subrayado al pasar ratón */
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
     header nav ul {
-        flex-direction: column;
-        background: #333;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        padding: 1rem;
-        display: none;
+        flex-direction: column; /* menú vertical */
+        background: #333; /* fondo oscuro */
+        position: absolute; /* se posiciona sobre el header */
+        top: 70px; /* debajo del header */
+        right: 0; /* pegado a la derecha */
+        padding: 1rem; /* espacio interno */
+        display: none; /* oculto por defecto */
     }
 
     header button {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2rem;
+        display: block; /* botón visible en móviles */
+        background: none; /* sin fondo */
+        border: none; /* sin borde */
+        color: white; /* color blanco */
+        font-size: 2rem; /* tamaño grande */
     }
 }
