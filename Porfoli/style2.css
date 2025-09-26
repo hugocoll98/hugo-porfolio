@@ -1,3 +1,9 @@
+*,*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif; 
     --ff-secondary: 'Source Code Pro', monospace; 
@@ -5,7 +11,7 @@
     --fw-reg: 300; 
     --fw-bold: 900; 
 
-    --clr-light: rgb(33, 86, 229); 
+    --clr-light: rgb(114, 149, 247); 
     --clr-dark: rgb(240, 240, 240); 
     --clr-accent: rgb(255, 153, 51) ; 
 
@@ -61,4 +67,67 @@ h3{
 h1,h2,h3 {
     line-height: 1.1;
     margin: 0;
+}
+
+.section-title {
+    margin-bottom: .25em;
+}
+
+.section-title-intro {
+    font-weight: var(--fw-reg);
+}
+
+.section-title-intro strong {
+    display: block;
+}
+
+.section-subtitle {
+    margin: 0;
+    font-size: var(--fs-h3)
+}
+
+.section-subtitle-intro,
+.section-subtitle-about {
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+header nav {display: none;}
+
+.intro{
+    position: relative;
+}
+
+.section-subtitle-intro {
+    display: inline-block;
+}
+
+@media(min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content; 
+        margin: 0 auto; 
+        grid-column-gap: 1em; 
+        grid-template-areas: "img title" "img subtitle"; 
+        grid-template-columns: min-content max-content; 
+    }
+
+    .intro-img {
+        grid-area:img; 
+        min-width: 250px;
+        position: relative; 
+        z-index: 2; 
+    }
+
+    .section-subtitle-intro {
+        align-self: start; 
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right; 
+        position: relative; 
+        left: -2em; 
+        width: calc(100%+2em)
+    }
 }
