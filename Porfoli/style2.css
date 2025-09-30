@@ -11,9 +11,9 @@
     --fw-reg: 300; 
     --fw-bold: 900; 
 
-    --clr-light: rgb(114, 149, 247); 
-    --clr-dark: rgb(240, 240, 240); 
-    --clr-accent: rgb(255, 153, 51) ; 
+    --clr-light: rgb(236, 140, 140); 
+    --clr-dark: rgb(68, 36, 36); 
+    --clr-accent: rgba(247, 0, 0, 0.959) ; 
 
     --fs-h1: 3rem; 
     --fs-h2: 2.125rem; 
@@ -42,7 +42,7 @@ body {
     background-color: var(--clr-light);
     color: var(--clr-dark);
     margin: 0;
-    font-family: var(--ff-primary);
+    font-family: var(--clr-accent);
     font-size: var(--fs-body);
     line-height: 1.6;
 }
@@ -182,15 +182,76 @@ header nav {display: none;}
     opacity: 0.25;
 }
 
-@media (min-width: 800px) {
-    .services {
-        display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .service + .service {
-        margin-left: 2em;
+.section-title-about {
+    font-weight: var(--fw-reg);
+}
 
+.section-title-about strong {
+    display: block;
+}
+
+.about {
+
+    position: relative;
+}
+
+.about-img {
+
+    box-shadow: var(--bs);
+}
+
+.section-subtitle-about {
+
+    display: inline-block;
+}
+
+.section-p-about {
+
+    display: inline-block;
+}
+
+
+@media (min-width: 600px) {
+
+    .about {
+
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas:
+            "title img"
+            "subtitle img"
+            "p img";
+        grid-template-columns: min-content max-content;
+    }
+
+    .about-img {
+
+        grid-area: img;
+        width: 600px;
+        position: relative;
+        z-index: 2;
+        border-radius: 10px;
+    }
+
+    .section-subtitle-about {
+
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: left;
+        position: relative;
+        width: calc(95% + 5rem);
+    }
+
+    .section-p-about {
+
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: left;
+        left: -3rem;
+        width: 500px;
     }
 }
