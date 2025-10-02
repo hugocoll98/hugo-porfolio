@@ -255,3 +255,55 @@ header nav {display: none;}
         width: 500px;
     }
 }
+
+.section-subtitle-work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+
+.my-work {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.porfolio {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+}
+
+.porfolio-item {
+    background: var(--clr-accent);
+    overflow: hidden;
+}
+
+.porfolio-img {
+    transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1);
+    opacity: 250ms linear; 
+}
+
+.porfolio-img:hover,
+.porfolio-item:focus 
+.porfolio-img {
+    transform: scale(1,2);
+    opacity: 0,5;
+}
+
+.scale-up-center{animation:scale-up-center 0.4s; } @keyframes scale-up-center{ 0%{transform:scale(.5)} 100%{transform:scale(1)} }
+
+.scale-up-top{animation:scale-up-top 0.4s; } @keyframes scale-up-top{0%{transform:scale(.5);transform-origin:center top}100%{transform:scale(1);transform-origin:center top}}
+
+.scale-up-left{animation:scale-up-left 0.4s; } @keyframes scale-up-left{0%{transform:scale(.5);transform-origin:left center}100%{transform:scale(1);transform-origin:left center}}
+
+.scale-up-vertical-center{animation:scale-up-vertical-center 0.4s} @keyframes scale-up-vertical-center{0%{transform:scaleY(.2)}100%{transform:scaleY(1)}}
+
+.scale-up-top-right{animation:scale-up-top-right 0.4s; } @keyframes scale-up-top-right{0%{transform:scale(.5);transform-origin:top right}100%{transform:scale(1);transform-origin:top right}}
+
+.scale-up-horizontal-right{animation:scale-up-horizontal-right 0.4s } @keyframes scale-up-horizontal-right{0%{transform:scaleX(.4);transform-origin:right center}100%{transform:scaleX(1);transform-origin:right center}}
+
+.scale-up-vertical-top{animation:scale-up-vertical-bottom 0.4s linear} @keyframes scale-up-vertical-bottom{0%{transform:scaleY(.4);transform-origin:center bottom}100%{transform:scaleY(1);transform-origin:center bottom}}
+
+.scale-up-bottom-right{animation:scale-up-bottom-right 0.4s; } @keyframes scale-up-bottom-right{0%{transform:scale(.5);transform-origin:right bottom}100%{transform:scale(1);transform-origin:right bottom}}
+
+.scale-up-horizontal-center{animation:scale-up-horizontal-center 0.4s} @keyframes scale-up-horizontal-center{0%{transform:scaleX(.2)}100%{transform:scaleX(1)}} 
