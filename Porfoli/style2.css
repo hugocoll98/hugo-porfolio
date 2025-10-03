@@ -11,7 +11,7 @@
     --fw-reg: 300; 
     --fw-bold: 900; 
 
-    --clr-light: rgb(236, 140, 140); 
+    --clr-light: rgb(248, 248, 248); 
     --clr-dark: rgb(68, 36, 36); 
     --clr-accent: rgba(247, 0, 0, 0.959) ; 
 
@@ -75,6 +75,7 @@ h1,h2,h3 {
 
 .section-title-intro {
     font-weight: var(--fw-reg);
+    display: inline-block;
 }
 
 .section-title-intro strong {
@@ -82,7 +83,7 @@ h1,h2,h3 {
 }
 
 .section-subtitle {
-    margin: 0;
+    margin: 1.5em;
     font-size: var(--fs-h3)
 }
 
@@ -307,3 +308,47 @@ header nav {display: none;}
 .scale-up-bottom-right{animation:scale-up-bottom-right 0.4s; } @keyframes scale-up-bottom-right{0%{transform:scale(.5);transform-origin:right bottom}100%{transform:scale(1);transform-origin:right bottom}}
 
 .scale-up-horizontal-center{animation:scale-up-horizontal-center 0.4s} @keyframes scale-up-horizontal-center{0%{transform:scaleX(.2)}100%{transform:scaleX(1)}} 
+
+.footer {
+    background-color: var(--clr-dark);
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-link {
+    font-weight: var(--fw-bold);
+}
+
+.foote-link:hover, 
+.social-link:hover {
+    opacity: .7;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list-item {
+    margin: 0 0.5em;
+}
+
+.social-list-link {
+    margin: 0.5em;
+}
+
+.scale-up-horizontal-center{animation:scale-up-horizontal-center 1.2s} @keyframes scale-up-horizontal-center{0%{transform:scaleX(.2)}100%{transform:scaleX(1)}}
