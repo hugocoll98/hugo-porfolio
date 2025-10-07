@@ -363,10 +363,9 @@ h1,h2,h3 {
     left: 0; 
     right: 0; 
     z-index: 100; 
-    transform: translateX(0%);
+    transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1); 
 }
-
 
 .nav-list {
     list-style: none;
@@ -388,4 +387,60 @@ h1,h2,h3 {
 
 .nav-link:hover {
     color: var(--clr-accent);
+}
+
+.nav-toogle {
+    background: transparent;
+    border: 0; 
+    padding: 0.5em;
+    cursor: pointer; 
+    position: absolute; 
+    right: 1em; 
+    top: 1em; 
+    z-index: 1000; 
+}
+
+.burguer {
+    display: block; 
+    position: relative; 
+}
+
+.burguer, .burguer:after, .burguer:before {
+    background-color: var(--clr-accent);
+    width: 2em;
+    height: 4px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+
+}
+
+.burguer:after {
+    bottom: 6px; 
+}
+
+.burguer:before {
+    top: 6px; 
+}
+
+.burguer:after, .burguer:before {
+    content: '';
+    position: absolute; 
+    left: 0; 
+    right: 0;
+}
+
+.nav-open .nav  {
+    transform: translateX(0%);
+}
+.nav-open .nav-toogle {
+    position: fixed;
+}
+.nav-open .burguer {
+    transform: rotate(.625turn);
+}
+.nav-open .burguer:before {
+    transform: rotate(90deg) translateX(-6px);
+}
+.nav-open .burguer:after {
+    opacity: 0;
 }
