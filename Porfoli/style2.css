@@ -5,13 +5,13 @@
 }
 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif; 
-    --ff-secondary: 'Source Code Pro', monospace; 
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Roboto", sans-serif;
 
     --fw-reg: 300; 
     --fw-bold: 900; 
 
-    --clr-light: rgb(248, 248, 248); 
+    --clr-light: rgb(247, 221, 221); 
     --clr-dark: rgb(68, 36, 36); 
     --clr-accent: rgba(247, 0, 0, 0.959) ; 
 
@@ -37,6 +37,11 @@
   padding: 0;
 }
 }   
+
+.section-subtitle-pene {
+    font-family: var(--ff-secondary);
+    color: var(--clr-light)
+}
 
 body {
     background-color: var(--clr-light);
@@ -71,11 +76,14 @@ h1,h2,h3 {
 
 .section-title {
     margin-bottom: .25em;
+    font-family: var(--ff-primary);
+
 }
 
 .section-title-intro {
     font-weight: var(--fw-reg);
     display: inline-block;
+    font-family: var(--ff-primary);
 }
 
 .section-title-intro strong {
@@ -84,15 +92,16 @@ h1,h2,h3 {
 
 .section-subtitle {
     margin: 1.5em;
-    font-size: var(--fs-h3)
+    font-size: var(--fs-h3);
+    font-family: var(--ff-secondary); 
 }
 
 .section-subtitle-intro,
 .section-subtitle-about {
     background: var(--clr-accent);
     padding: .25em 1em;
-    font-family: var(--ff-secondary);
     margin-bottom: 1em;
+    font-family: var(--ff-secondary); 
 }
 
 /* header nav {display: none;} */
@@ -156,13 +165,14 @@ h1,h2,h3 {
     background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;
-    background-image: url(img/luuk.jfif);
+    background-image: url(img/98.webp);
     background-size: cover; 
 }
 
 .section-title-services {
     color: var(--clr-accent);
     position: relative;
+    font-family: var(--ff-primary);
 }
 
 .services {
@@ -186,14 +196,15 @@ h1,h2,h3 {
 
 .section-title-about {
     font-weight: var(--fw-reg);
+    font-family: var(--ff-primary);
 }
 
 .section-title-about strong {
     display: block;
+    font-family: var(--ff-primary);
 }
 
 .about {
-
     position: relative;
 }
 
@@ -203,13 +214,13 @@ h1,h2,h3 {
 }
 
 .section-subtitle-about {
-
     display: inline-block;
 }
 
 .section-p-about {
 
     display: inline-block;
+    font-family: var(--ff-secondary);
 }
 
 
@@ -255,6 +266,7 @@ h1,h2,h3 {
         text-align: left;
         left: -3rem;
         width: 500px;
+        font-family: var(--ff-secondary);
     }
 }
 
@@ -262,6 +274,7 @@ h1,h2,h3 {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
+    font-family: var(--ff-primary);
 }
 
 .my-work {
@@ -283,6 +296,9 @@ h1,h2,h3 {
 .porfolio-img {
     transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1);
     opacity: 250ms linear; 
+    height: 350px;
+    width: 600px;
+    object-fit: cover;
 }
 
 .porfolio-img:hover,
