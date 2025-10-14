@@ -1,0 +1,75 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  text-shadow: 0 0 10px rgba(255, 0, 120, 0.8);
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: #ff4b6e;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff1c4d;
+  transform: scale(1.05);
+}
+
+#result-container {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease;
+}
+
+#percentage {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#love-image {
+  margin-top: 15px;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
